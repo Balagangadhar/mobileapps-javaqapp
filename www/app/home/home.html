@@ -1,0 +1,92 @@
+<div on-swipe-left="openFirstItem()" ng-init="loadItems()">
+<ion-side-menus>
+	<ion-side-menu side="left">
+	<ion-header-bar class="bar bar-header bar-dark"> Settings</ion-header-bar>
+	<ion-content>
+	<!-- <ion-item href="#/" menu-toggle="left">Home</ion-item> -->
+	<li class="item item-toggle">
+		Shuffle
+		<label class="toggle toggle-assertive">
+			<input type="checkbox" ng-checked='getShuffleStatus()' ng-click = 'toggleShuffle()'>
+			<div class="track">
+				<div class="handle"></div>
+			</div>
+		</label>
+	</li>
+	<div class="item item-divider">
+		Filter By Status
+	</div>
+	<ion-radio ng-model="appLearningStatus" ng-value="statusAll">All</ion-radio>
+	<ion-radio ng-model="appLearningStatus" ng-value="learnedStatus">Learned</ion-radio>
+	<ion-radio ng-model="appLearningStatus" ng-value="readingStatus">Learning</ion-radio>
+	
+	<div class="item item-divider">
+		Filter By Level
+	</div>
+	<ion-radio ng-model="appLevel" ng-value="levelAll">All</ion-radio>
+	<ion-radio ng-model="appLevel" ng-value="basic">Basic</ion-radio>
+	<ion-radio ng-model="appLevel" ng-value="intermediate">Intermediate</ion-radio>
+	<ion-radio ng-model="appLevel" ng-value="advanced">Advanced</ion-radio>
+
+
+</ion-content>
+</ion-side-menu>
+
+<ion-side-menu-content>  
+
+	<ion-header-bar class="bar-balanced">
+	<button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
+	<!-- <button class="button button-clear icon ion-ios-search"></button> -->
+	<div class="h1 title">JavaQApp <span class="badge badge-assertive">{{getLearningStatusMsg()}}</span></div>
+	<button class="button button-clear" ng-click="openFirstItem()">Start</button>
+</ion-header-bar>
+
+<div class="bar bar-subheader">
+	<!-- <label class="item item-input">
+		<i class="icon ion-search placeholder-icon"></i>
+		<input type="search" placeholder="Search">
+	</label> -->
+	<div class="bar bar-header item-input-inset">
+		<!-- <ion-search class="search-wrapper-light" placeholder="Search"  model="users" source="getItemByName(str)"></ion-search> -->
+		<div class="item-input-wrapper search-wrapper-light"><i class="icon ion-android-search"></i><input type="search" placeholder="Search" ng-model="search.value" ng-change="getItemsBySearchString(search.value)" ng-model-options="{debounce:300}"><i ng-if="search.value.length > 0" ng-click="clearSearch()" class="icon ion-close"></i></div>
+	</div>
+</div>
+
+
+<div class="item item-divider "> </div>
+<div class="item item-divider "> </div>
+<div class="item item-divider "> </div>
+<ion-scroll zooming="true" direction="xy" style="width: 100%; height: 100%">
+<div ng-repeat="item in items" >
+	<a class="item item-icon-left item-icon-right" ng-click="openItem(item,$index)">
+		<i class="icon ion-help-circled"></i>
+		<h2 ng-bind-html="item.question | highlight:search.value"></h2>
+		<p ng-bind-html="item.answer | highlight:search.value"></p>
+		<p>
+			Difficulty Level : <span ng-bind-html="item.level |capitalize | highlight:search.value"><span>
+		</p> 
+		<i class="icon ion-chevron-right"></i>
+	</a>
+</div>
+<div class="item item-divider "> </div>
+<i ng-if="items.length==0"><p class="">No data</p></i>
+<div class="item item-divider "> </div>
+<br/>
+<!-- <div ng-repeat="item in items" >
+	<a class="item item-icon-left item-icon-right" ng-click="openItem(item,$index)">
+		<i class="icon ion-help-circled"></i>
+		<h2>{{item.id}}. {{item.question}} <i class={{getLearningStatusIcon(item)}}></i> </h2>
+		<p>{{item.answer}}</p>
+		<i class="icon ion-chevron-right"></i>
+	</a>
+</div>
+<div class="item item-divider "> </div>
+<div class="item item-divider "> </div>
+<br/> -->
+</ion-scroll>
+
+
+</ion-side-menu-content>
+</ion-side-menus>
+
+</div>
