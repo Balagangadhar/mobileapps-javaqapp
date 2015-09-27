@@ -1,0 +1,56 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>textAngular 1.2.2 Demo</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'>
+
+    <style>
+.ta-editor {
+  min-height: 300px;
+  height: auto;
+  overflow: auto;
+  font-family: inherit;
+  font-size: 100%;
+}
+</style>
+
+</head>
+
+<body>
+
+<div ng-app="textAngularTest" ng-controller="wysiwygeditor" class="container app">
+  <h1>Editor</h1>
+  <button ng-click="disabled = !disabled" unselectable>Disable text-angular Toggle</button>
+  <div text-angular="text-angular" name="htmlcontent" ng-model="htmlcontent" ta-disabled='disabled'></div>
+  
+  
+</div>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.2/textAngular-sanitize.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.2/textAngular.min.js'></script>
+
+  <script type="text/javascript">
+	angular.module("textAngularTest", ['textAngular']);
+	function wysiwygeditor($scope) {
+		$scope.orightml = '';
+		$scope.htmlcontent = $scope.orightml;
+		$scope.disabled = false;
+
+    ////
+    // Masquerade perfers the scope value over the innerHTML
+    // Uncomment this line to see the effect:
+    // $scope.htmlcontenttwo = "Override originalContents";
+	};
+  </script>
+
+</body>
+
+</html>

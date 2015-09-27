@@ -4,25 +4,25 @@
 	<div class="h1 title" ng-click="gotoHome()">Home <span class="badge badge-assertive">{{getLearningStatusMsg()}}</span></div>
 	<button class="button icon-right button-clear ion-ios-arrow-right" ng-click="openNextItem()">Next</button>
 </ion-header-bar>
-<div class="item item-divider"> </div>
 <br/>
+<ion-content>
 <div class="item item-icon-left item-icon-right">
 	<i class="icon ion-help-circled"></i>
-	<h2>{{item.id}}. {{item.question}} </h2>
+	<h2 class="wrap-text">{{item.id}}. {{item.question}} </h2>
 	<i class={{getLearningStatusIcon()}}></i>
 </div>
 
-<ion-content>
+
 <div class="list card">
-	<div class="item item-divider"> </div>
+	<!-- <div class="item item-divider"> </div> -->
 	<div class="item item-body ">
 		<p>
-			Tags : <a href="#" class="subdued">{{getTagsAsString()}}</a><br/>
-			Applicable Versions : <a class="subdued">{{getVersionsAsString()}}</a><br/>
-			Difficulty Level :  <a class="subdued">{{item.level |capitalize}}</a>
+			Tag : <a href="#" class="subdued">{{item.tags | capitalize}}</a><br/>
+			Difficulty Level :  <a class="subdued">{{item.level |capitalize}}</a><br/>
+			Applicable Versions : <a class="subdued">{{item.versions | capitalize}}</a><br/>
 		</p>
-		<i class="icon ion-ios-lightbulb-outline"></i>
-		{{item.answer}}
+		<!-- <i class='icon ion-ios-lightbulb-outline'></i> -->
+		<p ng-bind-html= "item.answer"></p>
 	</div>
 </div>		
 <br/>

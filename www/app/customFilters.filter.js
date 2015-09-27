@@ -8,4 +8,8 @@ angular.module('myapp').filter('capitalize', function() {
         '<span class="highlighted">$1</span>')
       return $sce.trustAsHtml(text)
     }
-});
+}).filter('htmlToPlaintext', function(text) {
+    return function(text) {
+      return angular.element(text).text();
+    }
+  });

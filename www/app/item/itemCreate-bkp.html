@@ -1,0 +1,62 @@
+<ion-modal-view class="product edit create">
+<form name="itemCreateForm" novalidate>
+	<ion-header-bar class="bar-balanced fix-buttons">
+	<a class="button" ng-click="closeCreateItemPanel()">Cancel</a>
+	<h1 class="title">New Item</h1>
+	<a class="button" ng-click="submitItem()">Save</a>
+</ion-header-bar>
+
+<ion-content has-bouncing="false">
+
+<div class="row">
+	<div class="col">
+		<label class="item item-input large">
+			<input type="text" ng-model="item.question" placeholder="Question">
+		</label>
+	</div>
+</div>
+
+
+
+<div class="row">
+	<div class="col">
+		Difficulty Level : 
+	</div>
+</div>
+<div class="row">
+	<div class="col">
+		<select ng-model="item.level" class="item item-input large" ng-Required="true">
+			<option>Basic</option>
+			<option selected>Intermediate</option>
+			<option>Advanced</option>
+		</select>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col">
+		<label class="item item-input large">
+		<input type="text" ng-model="item.tags" placeholder="Tag" ng-Required="true">
+	</label>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col">
+		<label class="item item-input large">
+		<input type="text" ng-model="item.versions" placeholder="Application Version">
+	</label>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col">
+		<!-- <div text-angular="text-angular" name="htmlcontent123" ng-model="item.answer" ta-disabled='disabled'></div> -->
+<textarea id="input" name="input"></textarea>
+	</div>
+</div>
+
+</ion-content>
+</form>
+</ion-modal-view>

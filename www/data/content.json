@@ -1,0 +1,308 @@
+[
+  {
+    "id": 1,
+    "question": "What are the different kinds of variables used in Java?",
+    "answer": "<ul><li><b>&nbsp;Instance Variables (Non-Static Fields) :&nbsp;</b> Non-static fields are known as instance variables because their values are unique to each instance of a class (to each object, in other words)</li><li>&nbsp;<b>Class Variables (Static Fields) &nbsp;</b>: A class variable is any field declared with the static modifier; this tells the compiler that there is exactly one copy of this variable in existence, regardless of how many times the class has been instantiated</li><li><b>&nbsp;Local Variables</b> : Similar to how an object stores its state in fields, a method will often store its temporary state in local variables.&nbsp;</li>",
+    "tags": "variable",
+    "versions": "java 1+",
+    "level": "basic",
+    "learningStatus": "false"
+  },
+  {
+    "id": 2,
+    "question": "What are the non-keywords which cannot be used as identifiers in Java programs?",
+    "answer": "<i>true</i>, <i>false</i>, and <i>null</i> might seem like keywords, but they are actually literals; one cannot use them as identifiers in your programs.",
+    "tags": "variables",
+    "versions": "java 1+",
+    "level": "basic",
+    "learningStatus": "false"
+  },
+  {
+    "id": 3,
+    "question": "What is the difference between Staticaly Typed Language and Dynamically Typed Language?",
+    "answer": "In Statically Typed Languages, type checking happens at compile time whereas in case of Dynamically Typed Languages type checking happens at run time. The Java programming language is statically-typed, because all variables must first be declared before they can be used. Pelr, Javascript etc are the examples for Dynamically Typed Languages",
+    "tags": "language",
+    "versions": "java 1+",
+    "level": "intermediate",
+    "learningStatus": "false"
+  },
+  {
+    "id": 4,
+    "question": "Why Java Language is not pure object oriented language?",
+    "answer": "Java is not a Pure Object Oriented Language because it supports Primitive datatypes(byte, short, int, long, float, double, boolean, char), which are not objects. In pure OOP language like Scala, Smalltalk, everything in them is treated consistently as an object.",
+    "tags": "language",
+    "versions": "java 1+",
+    "level": "intermediate",
+    "learningStatus": "false"
+  },
+  {
+    "id": 5,
+    "question": "Can we use underscore in between digits in numerical literal?",
+    "answer": "Yes, in Java SE 7 and later, any number of underscore characters (_) can appear anywhere between digits in a numerical literal. This feature enables programmer to separate groups of digits in numeric literals, which can improve the readability of the code.One can place underscores only between digits; one cannot place underscores in the following places:<br/><ul><li>At the beginning or end of a number</li><li>Adjacent to a decimal point in a floating point literal</li><li>Prior to an F or L suffix</li><li>In positions where a string of digits is expected</li>",
+    "tags": "language",
+    "versions": "java 7+",
+    "level": "basic",
+    "learningStatus": "false"
+  },
+  {
+    "id": 6,
+    "question": "What is the main difference between labled and unlabeled break statement?",
+    "answer": "An unlabeled break statement terminates the innermost switch, for, while, or do-while statement, but a labeled break terminates an outer statement.",
+    "tags": "language",
+    "versions": "java 1+",
+    "level": "basic",
+    "learningStatus": "false"
+  },
+  {
+    "id": 7,
+    "question": "Does Java Language support Pass-By-Reference",
+    "answer": "No, Java Language doesn't support pass by reference.Reference data type parameters, such as objects, are also passed into methods by value. This means that when the method returns, the passed-in reference still references the same object as before. However, the values of the object's fields can be changed in the method, if they have the proper access level.",
+    "tags": "language",
+    "versions": "java 1+",
+    "level": "basic",
+    "learningStatus": "false"
+  },
+  {
+    "id": 8,
+    "question": "What is covariant return type?",
+    "answer": " A return type is allowed to vary in the same direction as the subclass.",
+    "tags": "language",
+    "versions": "java 5+",
+    "level": "advanced",
+    "learningStatus": "false"
+  },
+  {
+    "id": 9,
+    "question": "How many levels of access control are there in Java Language and what are they?",
+    "answer": "There are two levels of access control:<p>At the top level(top class level)—public, or package-private (no explicit modifier).At the member level—public, private, protected, or package-private (no explicit modifier)",
+    "tags": "language",
+    "versions": "java 5+",
+    "level": "advanced",
+    "learningStatus": "false"
+  },
+  {
+    "id": 10,
+    "question": "What is compile-time constant?",
+    "answer": " If a primitive type or a string is defined as a constant and the value is known at compile time, the compiler replaces the constant name everywhere in the code with its value. This is called a compile-time constant.If the value of the constant in the outside world changes (for example, if it is legislated that pi actually should be 3.975), you will need to recompile any classes that use this constant to get the current value.",
+    "tags": "language",
+    "versions": "java 5+",
+    "level": "intermediate",
+    "learningStatus": "false"
+  },
+  {
+    "id": 11,
+    "question": "What is static initialization?",
+    "answer": "A static initialization block is a normal block of code enclosed in braces, { }, and preceded by the static keyword.",
+    "tags": "language",
+    "versions": "java 5+",
+    "level": "intermediate",
+    "learningStatus": "false"
+  },
+  {
+    "id": 12,
+    "question": "Can interface consist static methods with implementation?",
+    "answer": "Yes, interface can consist static methods with implementation and these methods should be called using interface name.",
+    "tags": "Object Oriented",
+    "versions": "java 5+",
+    "level": "basic",
+    "learningStatus": "false"
+  },
+  {
+    "id": 13,
+    "question": "What are all types allowed in interface body?",
+    "answer": "Interface can consist abstract methods, default methods and static methods",
+    "tags": "Object Oriented",
+    "versions": "java 8+",
+    "level": "basic",
+    "learningStatus": "false"
+  },
+  {
+    "id": 14,
+    "question": "What are all types allowed in interface body?",
+    "answer": "Interface can consist abstract methods, default methods and static methods",
+    "tags": "Object Oriented",
+    "versions": "java 8+",
+    "level": "basic",
+    "learningStatus": "false"
+  },
+  {
+    "id": 15,
+    "question": "What are the implicit access modifier applied on constants of interface?",
+    "answer": " All constant values defined in an interface are implicitly public, static, and final",
+    "tags": "Object Oriented",
+    "versions": "java 5+",
+    "level": "basic",
+    "learningStatus": "false"
+  },
+  {
+    "id": 16,
+    "question": "How interfaces are differed by implements and extends keyword?",
+    "answer": "A Java class can implement more than one interface, so the implements keyword is followed by a comma-separated list of the interfaces implemented by the class. By convention, the implements clause follows the extends clause, if there is one",
+    "tags": "Object Oriented",
+    "versions": "java 5+",
+    "level": "basic",
+    "learningStatus": "false"
+  },
+  {
+    "id": 17,
+    "question": "How interfaces are differed by implements and extends keyword?",
+    "answer": "A Java class can implement more than one interface, so the implements keyword is followed by a comma-separated list of the interfaces implemented by the class. By convention, the implements clause follows the extends clause, if there is one",
+    "tags": "Object Oriented",
+    "versions": "java 8+",
+    "level": "basic",
+    "learningStatus": "false"
+  },
+  {
+    "id": 18,
+    "question": "What are functional interfaces?",
+    "answer": "An interface with single method is called as function interface.",
+    "tags": "Object Oriented",
+    "versions": "java 8+",
+    "level": "intermediate",
+    "learningStatus": "false"
+  },
+  {
+    "id": 19,
+    "question": "What are functional interfaces?",
+    "answer": "An interface with single method is called as function interface.",
+    "tags": "Object Oriented",
+    "versions": "java 8+",
+    "level": "intermediate",
+    "learningStatus": "false"
+  },
+  {
+    "id": 20,
+    "question": "Can static methods be inherited?",
+    "answer": "Static methods are inherited in Java but they don't take part in polymorphism. If we attempt to override the static methods they will just hide the superclass static methods instead of overriding them",
+    "tags": "Object Oriented",
+    "versions": "java 5+",
+    "level": "intermediate",
+    "learningStatus": "false"
+  },
+  {
+    "id": 21,
+    "question": "What is the difference between hidden and overridden?",
+    "answer": "The version of the hidden static method that gets invoked depends on whether it is invoked from the superclass or the subclass.The version of the overridden instance method that gets invoked is the one in the subclass.",
+    "tags": "Object Oriented",
+    "versions": "java 5+",
+    "level": "intermediate",
+    "learningStatus": "false"
+  },
+  {
+    "id": 22,
+    "question": "What is virtual method invocation?",
+    "answer": "The Java virtual machine (JVM) calls the appropriate method for the object that is referred to in each variable. It does not call the method that is defined by the variable's type. This behavior is referred to as virtual method invocation and demonstrates an aspect of the important polymorphism features in the Java language.",
+    "tags": "Object Oriented",
+    "versions": "java 5+",
+    "level": "intermediate",
+    "learningStatus": "false"
+  },
+  {
+    "id": 23,
+    "question": "Why methods called from constructors should generally be declared final?",
+    "answer": " If a constructor calls a non-final method, a subclass may redefine that method with surprising or undesirable results.",
+    "tags": "Object Oriented",
+    "versions": "java 5+",
+    "level": "intermediate",
+    "learningStatus": "false"
+  },
+  {
+    "id": 24,
+    "question": "What is overloading?",
+    "answer": "<p>Java can distinguish between methods with different method signatures. This means that methods within a class can have the same name if they have different parameter lists. This is called as overloading. </p><p><b>Note:</b> Overloaded methods should be used sparingly, as they can make code much less readable.<br/></p>",
+    "tags": "oops",
+    "versions": "",
+    "level": "Basic",
+    "learningStatus": "false"
+  },
+  {
+    "id": 25,
+    "question": "Does Java support Overloading by return type?",
+    "answer": "<p>Java language forbids overloading by return type but not the JVM. </p><p><span style=\"color: rgb(71, 71, 71);\"><b>Note:</b> There may be more than one matching method in a class because while the Java language forbids a class to declare multiple methods with the same signature but different return types, the Java virtual machine does not. This increased flexibility in the virtual machine can be used to implement various language features. For example, covariant returns can be implemented with </span><a href=\"http://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html#isBridge--\" style=\"color: rgb(74, 103, 130);\">bridge methods</a><span style=\"color: rgb(71, 71, 71);\">; the bridge method and the method being overridden would have the same signature but different return types.</span></p>",
+    "tags": "oops",
+    "versions": "",
+    "level": "Intermediate",
+    "learningStatus": "false"
+  },
+  {
+    "id": 26,
+    "question": "How java resolves multiple overloaded methods, if they are differ by super/sub classes?",
+    "answer": "<p>Java considers most <b>specific type</b>. </p><p>If there are two methods and one accepts Object as a parameter and other accepts Integer, Java chooses specific type to the argument to be passed. If we pass Object then it chooses former one and in case of integer it chooses later. No compilation error occurs. In case, if both the methods are at same level and trying to pass an argument which may be equally suitable for both the methods then during the call it throws compilation error. (Ambiguous calling).<br/></p>",
+    "tags": "oops",
+    "versions": "",
+    "level": "Intermediate",
+    "learningStatus": "false"
+  },
+  {
+    "id": 27,
+    "question": "What happens if we pass null value to system.out.prnitln()?",
+    "answer": "<p>Java throws ambiguous error. </p><p>If you provide an Object or a String variable (even if it has null value), the compiler would know which method to use, but if we directly pass null value to println function, it cannot find most specific method to call and throws ambiguous exception in runtime.  </p>",
+    "tags": "oops",
+    "versions": "",
+    "level": "Intermediate",
+    "learningStatus": "false"
+  },
+  {
+    "id": 28,
+    "question": "What is Type inference?",
+    "answer": "<p>Type inference refers to the automatic deduction of the data type of an expression in a programming language. In java it<span> is a Java compiler's ability to look at each method invocation and corresponding declaration to determine the type argument (or arguments) that make the invocation applicable. The inference algorithm determines the types of the arguments and, if available, the type that the result is being assigned, or returned. Finally, the inference algorithm tries to find the most specific type that works with all of the arguments.</span></p>",
+    "tags": "Compiler",
+    "versions": "",
+    "level": "Advanced",
+    "learningStatus": "false"
+  },
+  {
+    "id": 29,
+    "question": "What is the default constructor and explaint its importance?",
+    "answer": "<p>If a class doesn't have any constructor defined by user then compiler provides a no-argument constructor which is called as default constructor. If it finds at least one constructor defined in the class(including parameterised constructor)  then it will not create default constructor. <br/></p><p><span>This default constructor will call the no-argument constructor of the super class. In this situation, the compiler will complain if the super class doesn't have a no-argument constructor so you must verify that it does. If your class has no explicit super class, then it has an implicit super class of Object, which does have a no-argument constructor.Within an instance method or a constructor, this is a reference to the current object — the object whose method or constructor is being called. You can refer to any member of the current object from within an instance method or a constructor by using this.</span><br/></p>",
+    "tags": "oops",
+    "versions": "",
+    "level": "Intermediate",
+    "learningStatus": "false"
+  },
+  {
+    "id": 30,
+    "question": "What is the difference between  this and super?",
+    "answer": "<p>'<i><b>this</b></i>(arguments)' is useful to call other constructors from a constructor within the class. '<b>super</b>(arguments)' is useful to call super class constructors from a constructor. </p><p><b>Note:</b> 'this' or 'super' should be used as a first line in the constructor and hence both cannot be used in single constructor. <br/></p>",
+    "tags": "language",
+    "versions": "",
+    "level": "Basic",
+    "learningStatus": "false"
+  },
+  {
+    "id": 31,
+    "question": "How will access modifiers play role in creating an object?",
+    "answer": "<p>One can use access modifiers in a constructor's declaration to control which other classes can call the constructor. If another class cannot call a Class' constructor, it cannot directly create Class' objects.</p><p>Similar logic is used in singleton design pattern by making access modifier of a constructor as private. Hence outside classes cannot instantiate this class.<br/></p>",
+    "tags": "language",
+    "versions": "",
+    "level": "Intermediate",
+    "learningStatus": "false"
+  },
+  {
+    "id": 32,
+    "question": "What is varargs?",
+    "answer": "<p>It is a construct to pass an arbitrary number of values to a method. You use varargs when you don't know how many of a particular type of argument will be passed to the method. It's a shortcut to creating an array manually.<br/></p>",
+    "tags": "language",
+    "versions": "",
+    "level": "Basic",
+    "learningStatus": "false"
+  },
+  {
+    "id": 33,
+    "question": "What is shadow field and how is it used?",
+    "answer": "<p>A parameter can have the same name as one of the class's fields. If this is the case, the parameter is said to shadow the field. Shadowing fields can make your code difficult to read and is conventionally used only within constructors and methods that set a particular field.<br/></p>",
+    "tags": "language",
+    "versions": "",
+    "level": "Basic",
+    "learningStatus": "false"
+  },
+  {
+    "id": 34,
+    "question": "What is Garbage Collector",
+    "answer": "<p>Some object-oriented languages require that you keep track of all the objects you create and that you explicitly destroy them when they are no longer needed. Managing memory explicitly is tedious and error-prone. The Java platform allows you to create as many objects as you want (limited, of course, by what your system can handle), and you don't have to worry about destroying them. The Java runtime environment deletes objects when it determines that they are no longer being used. This process is called garbage collection.<br/></p>An object is eligible for garbage collection when there are no more references to that object. References that are held in a variable are usually dropped when the variable goes out of scope. Or, you can explicitly drop an object reference by setting the variable to the special value null. Remember that a program can have multiple references to the same object; all references to an object must be dropped before the object is eligible for garbage collection.<br/>The Java runtime environment has a garbage collector that periodically frees the memory used by objects that are no longer referenced. The garbage collector does its job automatically when it determines that the time is right.",
+    "tags": "language",
+    "versions": "",
+    "level": "Basic",
+    "learningStatus": "false"
+  }
+]

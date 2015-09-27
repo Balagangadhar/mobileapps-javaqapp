@@ -1,0 +1,57 @@
+
+<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
+<div style="padding :20px">
+	
+<form name="itemCreateForm" novalidate>
+	<a class="button" ng-click="closeCreateItemPanel()">Cancel</a>
+	<a class="button" ng-click="submitItem()">Save</a>
+
+
+<div class="row">
+	<div class="col">
+		<label class="item item-input large">
+			<input type="text" ng-model="item.question" placeholder="Question">
+		</label>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col">
+		Difficulty Level : 
+	</div>
+</div>
+<div class="row">
+	<div class="col">
+		<select ng-model="item.level" class="item item-input large" ng-Required="true">
+			<option>Basic</option>
+			<option selected>Intermediate</option>
+			<option>Advanced</option>
+		</select>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col">
+		<label class="item item-input large">
+		<input type="text" ng-model="item.tags" placeholder="Tag" ng-Required="true">
+	</label>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col">
+		<label class="item item-input large">
+		<input type="text" ng-model="item.versions" placeholder="Application Version">
+	</label>
+	</div>
+</div>
+<div style="height:300px;overflow:scroll;">
+<div class="row">
+	<div class="col">
+		<div text-angular="text-angular" ng-model="item.answer" ta-disabled='disabled'></div>
+	</div>
+</div>
+</div
+</form>
+
+</div>

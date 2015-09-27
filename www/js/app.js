@@ -1,10 +1,11 @@
-angular.module('myapp', ['ionic','ngCordova']).
+angular.module('myapp', ['ionic','ngCordova','textAngular']).
 run(function($ionicPlatform,DbService,ItemService) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-  DbService.init();
-  if(window.cordova && window.cordova.plugins.Keyboard) {
+  // DbService.init();
+      DbService.init();
+  if(window.cordova && window.configordova.plugins.Keyboard) {
     cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
   }
   if(window.StatusBar) {
@@ -24,6 +25,11 @@ config(function($stateProvider, $urlRouterProvider) {
     url: '/item/{itemId}',
     templateUrl: 'app/item/item.html',
     controller : 'ItemCtrl'
+  })
+  .state('create', {
+    url: '/create',
+    templateUrl: 'app/item/itemCreate.html',
+    controller : 'HomeCtrl'
   })
 
 })

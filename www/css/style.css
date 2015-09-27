@@ -1,14 +1,49 @@
 /* Empty. Add your own CSS if you like */
-.bar.item-input-inset .item-input-wrapper input {
-    width: 100%;
+
+.item-input-inset{
+    position :absolute !important;
 }
 
 .search-wrapper-light {
-    border-bottom: 2px solid rgba(255,255,255,0.5);
-    background: none;
-    border-radius: 0;
-    margin-left: 5px;
-    margin-right: 5px;
+   border-bottom: 2px solid rgba(255,255,255,0.5);
+   background: none;
+   border-radius: 0;
+   margin-left: 5px;
+   margin-right: 5px;
 }
 
-.highlighted { background: yellow }
+.highlighted { 
+    background: yellow
+}
+
+.item-divider-radiogroup {
+   padding-top: 8px;
+   padding-bottom: 8px;
+   min-height: 30px;
+   background-color: #444444;
+   color: #FFF;
+   font-weight: 500; 
+}
+.wrap-text {
+    white-space : normal !important;
+}
+/*.ta-editor {
+  min-height: 300px;
+  height: auto;
+  overflow: auto;
+  font-family: inherit;
+  font-size: 100%;
+}*/
+
+.modal{
+  top: 0 ;
+  bottom: 0 ; 
+  left: 0 ;
+  right: 0 ;
+  width: 100% ;
+}
+/*.btn-toolbar .btn-group{
+  float : left;
+}
+*/
+

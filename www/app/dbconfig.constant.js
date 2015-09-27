@@ -11,4 +11,7 @@ angular.module('myapp').constant('DBCONFIG', {
             learningStatus: 'text'
         }
     }
+}).constant('GLOBAL',{
+    admin : false,
+    noOfClicks : 0
 })
